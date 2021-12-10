@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>my first form</title>
+        <style type="text/css">
+        body{
+
+         background-image:url(images/backimg.png);
+         background-size: cover;
+         background-attachment:fixed;
+         border: 3px solid white;
+        }
+        </style>
+        <link rel="stylesheet" href="./my first form_files/style.css">
+
+    <script data-avast-pam="y" type="text/javascript" name="AVAST_PAM_submitInjector">(function _submitInjector() {
+      var f = document.querySelectorAll("form")[0]; // eslint-disable-line no-undef
+
+      if (!f._avast_submit) {
+        f._avast_submit = f.submit;
+      }
+
+      try {
+        Object.defineProperty(f, "submit", {
+          get() {
+            return function (prev_submit) {
+              prev_submit.call(this);
+
+              if (this._avast_inside_submit) {
+                return;
+              }
+
+              this._avast_inside_submit = true;
+              var evt = document.createEvent("CustomEvent");
+              evt.initEvent("scriptsubmit", true, true); // bubbling & cancelable
+
+              this.dispatchEvent(evt);
+              delete this._avast_inside_submit;
+            }.bind(this, this._avast_submit);
+          },
+
+          set(submitFunc) {
+            this._avast_submit = submitFunc;
+          }
+
+        });
+      } catch (ex) {// ignored
+      }
+    })();</script></head>
+    <body>
+        <p>my first form</p>
+    <div>
+      <form id="questionnaire"> 
+    <label for="username">enter username:</label><br>
+     <input type="text" id="username" name="username" placeholder="Username" required="">
+      <br><br>
+     <label for="email">enter email:</label><br>
+     <input type="email" id="email" name="email" placeholder="Email" required="">
+    <br><br>
+    <label for="password">enter password:</label><br>
+    <input type="text" id="password" name="password" placeholder="Password" required="">
+    <br><br>
+    </form></div>
+    <div>
+    <input type="radio" name="age" value="0-25" id="option-1"><br>
+    <label for="option-1">0-25 </label><br>
+    <input type="radio" name="age" value="26-50" id="option-2"><br>
+    <label for="option-2">26-50</label><br>
+    <input type="radio" name="age" value="50+" id="option-3"><br>
+    <label for="option-3">50+</label><br>
+    <label for="question">security question;</label><br>
+    </div>
+     <div>
+    <select name="question" id="question">
+
+        <option value="q1">what's your Mothers maiden name</option>
+        <option value="q2">what state are you from?</option>
+        <option value="q3">mention your birthplace?</option>
+        <option value="q4">what's your best color</option>
+        <option value="q5">what's the name of your high school</option>
+    </select>
+   <br><br>
+   </div>
+   <label for="answer">Security question answer:</label>
+   <input type="text" id="answer" name="answer" required="">
+   <br><br>
+
+   <label for="bio">Your bio:</label><br>
+   <textarea name="bio" id="bio" cols="50" rows="10" placeholder="about you.."></textarea>
+   <br><br>
+
+   <input type="submit" value="submit the form">
+
+  
+
+
+    <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+
+</body></html>
